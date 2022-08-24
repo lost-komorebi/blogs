@@ -54,4 +54,4 @@ class Comment(db.Model):
         nullable=False)  # foreign key relates to blog_posts.id
 
 
-db.create_all()
+#db.create_all()
