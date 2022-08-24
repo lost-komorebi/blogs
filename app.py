@@ -10,6 +10,7 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, cur
 from sqlalchemy.orm import relationship
 from flask_gravatar import Gravatar
 import os
+import psycopg2
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
