@@ -22,7 +22,7 @@ ckeditor = CKEditor(app)
 # CONNECT TO DB
 uri = os.environ.get('DATABASE_URL', 'sqlite:///blog.db')
 if uri and uri.startswith("postgres://"):
-    uri.replace("postgres://", "postgresql://")
+    uri = uri.replace("postgres://", "postgresql://")
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
